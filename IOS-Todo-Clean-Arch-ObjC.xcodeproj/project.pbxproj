@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0847E30CB04C05C3D298E628 /* libPods-IOS-Todo-Clean-Arch-ObjCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9859CB17D552E9AD7AE43C /* libPods-IOS-Todo-Clean-Arch-ObjCTests.a */; };
+		5297C5E894B12B5BC25F76FF /* libPods-IOS-Todo-Clean-Arch-ObjC-IOS-Todo-Clean-Arch-ObjCUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D64B266FFD6D2BEEB91D8935 /* libPods-IOS-Todo-Clean-Arch-ObjC-IOS-Todo-Clean-Arch-ObjCUITests.a */; };
+		8487F7942DF9438E00868F48 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8487F7932DF9438E00868F48 /* libsqlite3.tbd */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		845BB16C2DDC75D4009811C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,9 +30,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B32AD7CCE96700C4AE626A0 /* libPods-IOS-Todo-Clean-Arch-ObjC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IOS-Todo-Clean-Arch-ObjC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E9859CB17D552E9AD7AE43C /* libPods-IOS-Todo-Clean-Arch-ObjCTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IOS-Todo-Clean-Arch-ObjCTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		845BB1502DDC75D2009811C3 /* IOS-Todo-Clean-Arch-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS-Todo-Clean-Arch-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		845BB16B2DDC75D4009811C3 /* IOS-Todo-Clean-Arch-ObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IOS-Todo-Clean-Arch-ObjCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		845BB1752DDC75D4009811C3 /* IOS-Todo-Clean-Arch-ObjCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IOS-Todo-Clean-Arch-ObjCUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8487F7932DF9438E00868F48 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		D64B266FFD6D2BEEB91D8935 /* libPods-IOS-Todo-Clean-Arch-ObjC-IOS-Todo-Clean-Arch-ObjCUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IOS-Todo-Clean-Arch-ObjC-IOS-Todo-Clean-Arch-ObjCUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -61,17 +71,11 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		845BB14D2DDC75D2009811C3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		845BB1682DDC75D4009811C3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0847E30CB04C05C3D298E628 /* libPods-IOS-Todo-Clean-Arch-ObjCTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,12 +83,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5297C5E894B12B5BC25F76FF /* libPods-IOS-Todo-Clean-Arch-ObjC-IOS-Todo-Clean-Arch-ObjCUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8487F7922DF9436500868F48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8487F7942DF9438E00868F48 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28FAEA3338316A18902DB8BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8487F7932DF9438E00868F48 /* libsqlite3.tbd */,
+				4B32AD7CCE96700C4AE626A0 /* libPods-IOS-Todo-Clean-Arch-ObjC.a */,
+				D64B266FFD6D2BEEB91D8935 /* libPods-IOS-Todo-Clean-Arch-ObjC-IOS-Todo-Clean-Arch-ObjCUITests.a */,
+				5E9859CB17D552E9AD7AE43C /* libPods-IOS-Todo-Clean-Arch-ObjCTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		845BB1472DDC75D2009811C3 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +116,7 @@
 				845BB16E2DDC75D4009811C3 /* IOS-Todo-Clean-Arch-ObjCTests */,
 				845BB1782DDC75D4009811C3 /* IOS-Todo-Clean-Arch-ObjCUITests */,
 				845BB1512DDC75D2009811C3 /* Products */,
+				28FAEA3338316A18902DB8BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,8 +138,8 @@
 			buildConfigurationList = 845BB17E2DDC75D4009811C3 /* Build configuration list for PBXNativeTarget "IOS-Todo-Clean-Arch-ObjC" */;
 			buildPhases = (
 				845BB14C2DDC75D2009811C3 /* Sources */,
-				845BB14D2DDC75D2009811C3 /* Frameworks */,
 				845BB14E2DDC75D2009811C3 /* Resources */,
+				8487F7922DF9436500868F48 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,8 +149,6 @@
 				845BB1522DDC75D2009811C3 /* IOS-Todo-Clean-Arch-ObjC */,
 			);
 			name = "IOS-Todo-Clean-Arch-ObjC";
-			packageProductDependencies = (
-			);
 			productName = "IOS-Todo-Clean-Arch-ObjC";
 			productReference = 845BB1502DDC75D2009811C3 /* IOS-Todo-Clean-Arch-ObjC.app */;
 			productType = "com.apple.product-type.application";
@@ -147,8 +170,6 @@
 				845BB16E2DDC75D4009811C3 /* IOS-Todo-Clean-Arch-ObjCTests */,
 			);
 			name = "IOS-Todo-Clean-Arch-ObjCTests";
-			packageProductDependencies = (
-			);
 			productName = "IOS-Todo-Clean-Arch-ObjCTests";
 			productReference = 845BB16B2DDC75D4009811C3 /* IOS-Todo-Clean-Arch-ObjCTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -170,8 +191,6 @@
 				845BB1782DDC75D4009811C3 /* IOS-Todo-Clean-Arch-ObjCUITests */,
 			);
 			name = "IOS-Todo-Clean-Arch-ObjCUITests";
-			packageProductDependencies = (
-			);
 			productName = "IOS-Todo-Clean-Arch-ObjCUITests";
 			productReference = 845BB1752DDC75D4009811C3 /* IOS-Todo-Clean-Arch-ObjCUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -187,6 +206,7 @@
 				TargetAttributes = {
 					845BB14F2DDC75D2009811C3 = {
 						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1620;
 					};
 					845BB16A2DDC75D4009811C3 = {
 						CreatedOnToolsVersion = 16.2;
@@ -207,6 +227,9 @@
 			);
 			mainGroup = 845BB1472DDC75D2009811C3;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				84477ED62DDCBB7C00816B71 /* XCRemoteSwiftPackageReference "TrueTime.swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 845BB1512DDC75D2009811C3 /* Products */;
 			projectDirPath = "";
@@ -286,6 +309,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "IOS-Todo-Clean-Arch-ObjC/IOS-Todo-Clean-Arch-ObjC.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 385HM6N397;
@@ -296,6 +321,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +330,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.riseuplabs.app.IOS-Todo-Clean-Arch-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "IOS-Todo-Clean-Arch-ObjC/IOS-Todo-Clean-Arch-ObjC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -313,6 +342,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "IOS-Todo-Clean-Arch-ObjC/IOS-Todo-Clean-Arch-ObjC.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 385HM6N397;
@@ -323,6 +354,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,6 +363,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.riseuplabs.app.IOS-Todo-Clean-Arch-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "IOS-Todo-Clean-Arch-ObjC/IOS-Todo-Clean-Arch-ObjC-Bridging-Header.h";
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -559,6 +593,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84477ED62DDCBB7C00816B71 /* XCRemoteSwiftPackageReference "TrueTime.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/instacart/TrueTime.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 845BB1482DDC75D2009811C3 /* Project object */;
 }
