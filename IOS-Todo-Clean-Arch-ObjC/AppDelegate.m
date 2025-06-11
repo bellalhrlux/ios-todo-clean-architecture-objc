@@ -6,6 +6,10 @@
 //
 
 #import "AppDelegate.h"
+#import "TodoListViewController.h"
+#import "DatabaseManager.h"
+#import "TodoRepository.h"
+#import "TodoUseCases.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +20,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    // Initialize Database
+        DatabaseManager *databaseManager = [DatabaseManager sharedInstance];
+        if (![databaseManager openDatabase]) {
+            NSLog(@"Failed to open database");
+            return NO;
+        }
+    
     return YES;
 }
 
@@ -27,6 +40,9 @@
     // Called when a new scene session is being created.
     // Use this method to select a configuration to create the new scene with.
     return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
+}
+-(void) applicationWillTerminate:(UIApplication *)application{
+    [[DatabaseManager sharedInstance] closeDatabase];
 }
 
 

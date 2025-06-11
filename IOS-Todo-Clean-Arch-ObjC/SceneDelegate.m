@@ -6,6 +6,10 @@
 //
 
 #import "SceneDelegate.h"
+#import "TodoListViewController.h"
+#import "DatabaseManager.h"
+#import "TodoRepository.h"
+#import "TodoUseCases.h"
 
 @interface SceneDelegate ()
 
@@ -18,6 +22,31 @@
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+    
+    // Cast to UIWindowScene
+    UIWindowScene *windowScene = (UIWindowScene *)scene;
+    
+    // Initialize Database
+    DatabaseManager *databaseManager = [DatabaseManager sharedInstance];
+    if (![databaseManager openDatabase]) {
+        NSLog(@"Failed to open database");
+        return;
+    }
+    
+    // Setup Dependencies
+    TodoRepository *todoRepository = [[TodoRepository alloc] initWithDatabaseManager:databaseManager];
+    TodoUseCases *todoUseCases = [[TodoUseCases alloc] initWithRepository:todoRepository];
+    
+    // Setup Main View Controller
+    TodoListViewController *todoListVC = [[TodoListViewController alloc] init];
+    todoListVC.todoUseCases = todoUseCases;
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:todoListVC];
+    
+    // Setup Window with windowScene
+    self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
+    self.window.rootViewController = navigationController;
+    [self.window makeKeyAndVisible];
 }
 
 
@@ -51,7 +80,9 @@
     // Called as the scene transitions from the foreground to the background.
     // Use this method to save data, release shared resources, and store enough scene-specific state information
     // to restore the scene back to its current state.
+    [[DatabaseManager sharedInstance] closeDatabase];
 }
+
 
 
 @end
